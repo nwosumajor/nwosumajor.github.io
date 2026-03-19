@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AWS_S3_BUCKET_NAME = 'my-professional-portfolio-2026' // Replace with your S3 bucket name
+        AWS_S3_BUCKET_NAME = 'nwosumajor-professional-portfolio-2026' // Replace with your S3 bucket name
     }
 
     stages {
