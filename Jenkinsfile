@@ -6,10 +6,11 @@ pipeline {
     }
 
     stages {
-        stage('Install Node Dependencies') {
+       stage('Install Node Dependencies') {
             steps {
                 echo 'Cleaning up old or corrupted dependencies...'
-                sh 'rm -rf node_modules package-lock.json'
+                // Added venv to the list of things to delete
+                sh 'rm -rf node_modules package-lock.json venv'
                 
                 echo 'Installing npm dependencies...'
                 sh 'npm install'
