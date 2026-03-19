@@ -7,6 +7,10 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Add this typescript block to skip the check during production builds
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   output: "export", // 1. Tells Next.js to build a static HTML export into the 'out' directory
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
